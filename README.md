@@ -21,7 +21,7 @@ create table produtos (
 create table pedidos (
     id_pedido int not null auto_increment primary key,
     codigo_pedido int not null,
-    val_final float not null,
+    val_final float,
     data_pedido date not null,
     id_cliente int not null,
     foreign key (id_cliente) references clientes(id_cliente)
@@ -41,7 +41,7 @@ show tables;
 
 
 insert into clientes (id_cliente, nome, telefone, email, nascimento, idade) values
-(1, 'alberto aguira ávila', '1913914552', 'alberto@example.com', '1980-05-15', '44 anos');
+(1, 'alberto aguira ávila', '1913914552', 'alberto@gmail.com', '1980-05-15', '44 anos');
 
 insert into produtos (codigo_produto, nome_produto, preco_produto, quant_estoque) values
 (101, 'pão francês', 0.50, 100),
